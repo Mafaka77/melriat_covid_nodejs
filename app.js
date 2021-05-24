@@ -7,10 +7,10 @@ const path=require('path');
 
 const app = express();
 
-// var corsOptions = {
-//     origin: "http://localhost:8080"
-//   };
-// app.use(cors(corsOptions));
+var corsOptions = {
+    origin: "http://localhost:19006"
+  };
+app.use(cors(corsOptions));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 app.use(express.static(path.join(__dirname, 'public')));
