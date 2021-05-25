@@ -22,3 +22,10 @@ exports.index=(req,res, next)=> {
         res.send(news)
     })
 }
+exports.delete=(req,res,next)=>{
+    let id=req.params.id
+    News.findByIdAndDelete(id).then(re=>{
+        let data=JSON.stringify(re);
+        res.send(data);
+    })
+}

@@ -29,6 +29,6 @@ router.delete('/deleteActiveCase/:id',cors(),AddActiveCase.delete);
 
 router.post('/addNews',cors(),AddNews.store);
 router.get('/getNews',cors(),AddNews.index);
-
+router.delete('/deleteNews/:id',cors(),AddNews.delete);
 module.exports =router;
 
