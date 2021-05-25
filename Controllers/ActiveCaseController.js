@@ -30,7 +30,7 @@ exports.index=(req,res, next)=>{
 exports.delete=(req,res,next)=>{
     let id=req.params.id;
     ActiveCases.findByIdAndDelete(id).then(re=>{
-        let data=JSON.stringify(req);
+        let data=JSON.stringify(re);
         res.send(data);
     })
 }
