@@ -22,7 +22,7 @@ exports.store=(req,res,next)=>{
 }
 exports.index=(req,res, next)=>{
     ActiveCases.find().then(re=>{
-        let data=JSON.stringify(req);
+        let data=JSON.stringify(re);
         res.send(data);
     })
 }
