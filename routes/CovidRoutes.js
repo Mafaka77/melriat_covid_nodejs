@@ -5,6 +5,7 @@ var cors = require('cors')
 const AddCovidCasesController=require('../Controllers/CovidCaseController');
 const AddQuarantine = require('../Controllers/QuarantineListController')
 const AddActiveCase= require('../Controllers/ActiveCaseController')
+const AddNews= require('../Controllers/NewsController')
 
 router.get("/", (req, res) => {
     res.json({ message: "Welcome to bezkoder application." });
@@ -24,7 +25,10 @@ router.post('/addActiveCase',cors(),AddActiveCase.store);
 router.get('/getAllActiveCase',cors(),AddActiveCase.index);
 router.delete('/deleteActiveCase/:id',cors(),AddActiveCase.delete);
 
+//NEWS routes
 
+router.post('/addNews',cors(),AddNews.store);
+router.get('/getNews',cors(),AddNews.index);
 
 module.exports =router;
 
