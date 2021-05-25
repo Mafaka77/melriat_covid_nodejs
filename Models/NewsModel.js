@@ -12,7 +12,7 @@ var schemaOptions={
 const addNews=new Schema({
     headings:{ type:String},
     details:{ type:String},
-    post_date:{ type:String},
+    date:{ type:String},
     image:{ type:String},
 },schemaOptions);
 
