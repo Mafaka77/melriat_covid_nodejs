@@ -7,19 +7,19 @@ const path=require('path');
 
 const app = express();
 
-var corsOptions = {
-    origin: [ 
-    'http://melriat.herokuapp.com/addCovidCases',
-    'http://melriat.herokuapp.com/index',
-    'http://melriat.herokuapp.com/update/:id',
-    'http://melriat.herokuapp.com/addQuarantineList',
-    'http://melriat.herokuapp.com/getAllQuarantineList'
-]
-  };
+// var corsOptions = {
+//     origin: [ 
+//     'http://melriat.herokuapp.com/addCovidCases',
+//     'http://melriat.herokuapp.com/index',
+//     'http://melriat.herokuapp.com/update/:id',
+//     'http://melriat.herokuapp.com/addQuarantineList',
+//     'http://melriat.herokuapp.com/getAllQuarantineList'
+// ]
+//   };
   app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8888');
+    res.setHeader('Access-Control-Allow-Origin', 'http://melriat.herokuapp.com');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -35,7 +35,7 @@ var corsOptions = {
     next();
 });
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 app.use(express.static(path.join(__dirname, 'public')));
