@@ -8,7 +8,7 @@ const path=require('path');
 const app = express();
 
 var corsOptions = {
-    origin: ['https://melriat.herokuapp.com/', 
+    origin: [ 
     'http://melriat.herokuapp.com/addCovidCases',
     'http://melriat.herokuapp.com/index',
     'http://melriat.herokuapp.com/update/:id',
