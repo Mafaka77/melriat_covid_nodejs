@@ -5,12 +5,14 @@ exports.store=(req,res,next) => {
     const total_cases=req.body.total_cases;
     const recovered=req.body.recovered;
     const total_deaths=req.body.total_deaths;
+    const home_quarantine=req.body.home_quarantine;
 
     const add=new AddCases({
         active_cases: active_cases,
         total_cases: total_cases,
         recovered: recovered,
-        total_deaths: total_deaths
+        total_deaths: total_deaths,
+        home_quarantine: home_quarantine
     });
     add.save().then(re=>{
        var data=JSON.stringify(re);

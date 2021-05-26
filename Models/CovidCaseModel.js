@@ -14,6 +14,7 @@ const addCovidCases=new Schema({
     total_cases:{ type:String},
     recovered:{ type:String},
     total_deaths:{ type:String},
+    home_quarantine:{type:String}
 },schemaOptions);
  var AddCovidCases=mongoose.model('CovidCase',addCovidCases)
  module.exports=AddCovidCases;
