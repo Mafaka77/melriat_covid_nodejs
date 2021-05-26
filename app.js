@@ -8,7 +8,7 @@ const path=require('path');
 const app = express();
 
 var corsOptions = {
-    origin: ["http://localhost:19006",'http://localhost:8080']
+    origin: 'https://melriat.herokuapp.com'
   };
 app.use(cors(corsOptions));
 app.use(express.json())
