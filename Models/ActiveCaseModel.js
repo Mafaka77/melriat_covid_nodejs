@@ -14,7 +14,8 @@ const activeCase=new Schema({
     age:{ type:String},
     section:{ type:String},
     admitted_to:{ type:String},
-    admitted_date:{ type:String}
+    admitted_date:{ type:String},
+    dischrage_date:{ type:String},
 },schemaOptions);
 
 const ActiveCases=mongoose.model('ActiveCases',activeCase);
