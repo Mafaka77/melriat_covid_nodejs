@@ -15,7 +15,7 @@ const addQuarantineList=new Schema({
     mobile:{ type:String},
     address:{ type:String},
     date:{ type:Date},
-    dischrage_date:{ type:Date}
+    discharge_date:{ type:Date}
    
 },schemaOptions);
 var AddQuarantine=mongoose.model('AddQuarantine',addQuarantineList)

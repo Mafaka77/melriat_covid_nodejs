@@ -6,13 +6,14 @@ exports.store=(req,res,next) => {
     const mobile=req.body.mobile;
     const address=req.body.address;
     const date=req.body.from_date;
-
+    const discharge_date=req.body.discharge_date;
     const add=new AddQuarantine({
         categories:categories,
         name:name,
         mobile:mobile,
         address:address,
         date:date,
+        discharge_date:discharge_date
     });
     add.save().then(re=>{
         var data = JSON.stringify(re)
