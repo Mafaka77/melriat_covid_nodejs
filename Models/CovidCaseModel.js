@@ -27,6 +27,8 @@ const addCovidCases=new Schema({
     upa_quarantine:{ type:String},
     recover_percent:{type:String},
     total_quarantine:{type:String},
+    quarantine_center:{type:String},
+    
     
 
 },schemaOptions);
