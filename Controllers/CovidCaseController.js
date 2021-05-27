@@ -16,6 +16,7 @@ exports.store=(req,res,next) => {
     const naupang_quarantine=req.body.naupang_quarantine;
     const thalai_quarantine=req.body.thalai_quarantine;
     const upa_quarantine=req.body.upa_quarantine;
+    const recover_percent=req.body.recover_percent;
 
     
 
@@ -35,6 +36,7 @@ exports.store=(req,res,next) => {
         naupang_quarantine: naupang_quarantine,
         thalai_quarantine:thalai_quarantine,
         upa_quarantine: upa_quarantine,
+        recover_percent: recover_percent,
 
     });
     add.save().then(re=>{
